@@ -25,6 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll()
 		.anyRequest()
 			.authenticated()
+		.and().cors()
 		.and()
 		.formLogin(form -> form
             .loginPage("/login")
@@ -46,3 +47,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.passwordEncoder(encoder);
 	}
 }
+
+
